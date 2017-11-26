@@ -40,25 +40,6 @@ function write(data, name) {
 }
 
 /**
- * Parse the data
- */
-function parse(data) {
-  parsed_data = [];
-  parsed_data.push(['Coin', 'Value ('+ data[1][2].split(' ')[0] +')', 'Currency']);
-  data.forEach(function(d, i){
-    if (i === 0) {}
-    else {
-    parsed_data.push([
-      d[0],
-      parseFloat(d[2].split(' ')[1]),
-      d[2].split(' ')[0]
-    ]);
-    }
-  });
-  return parsed_data;
-}
-
-/**
  * Reshape "copy and pasted" data
  */
 function reshape(data) {
@@ -85,6 +66,7 @@ function reshape(data) {
  * Parse the data
  */
 function parse(data) {
+  Logger.log(data);
   parsed_data = [];
   parsed_data.push(['Coin', 'Value ('+ data[1][2].split(' ')[0] +')', 'Currency']);
   data.forEach(function(d, i){
@@ -92,14 +74,13 @@ function parse(data) {
     else {
     parsed_data.push([
       d[0],
-      parseFloat(d[2].split(' ')[1]),
-      d[2].split(' ')[0]
+      parseFloat(d[5].split(' ')[1].replace(',', '')),
+      d[5].split(' ')[0]
     ]);
     }
   });
   return parsed_data;
 }
-
 
 /**
  * Plot a bar chart
