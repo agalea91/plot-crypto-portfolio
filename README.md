@@ -4,3 +4,5 @@ Plot your cryptocompare.com portfolio using Google Sheets, with this JavaScript 
 
 For more detailed intructions, check out my __blog post here__:    
 https://medium.com/@agalea91/visualize-your-crypto-portfolio-eca2b240d9df.
+
+![](https://github.com/agalea91/plot-crypto-portfolio/blob/master/holdings-examlpe.png?raw=true)
